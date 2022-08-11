@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href=".\form.css">
-  <title>AKC-notice</title>
-</head>
-<body>
-    <fieldset>
-        <legend>AKC下单通知</legend>
-        <form method="post" id="akc_notice_form" data-netlify="true">
-            <label for="id_email">下单人邮箱地址:</label>
-            <input type="email" name="email" placeholder="@hafele.com.cn" maxlength="254" required="" id="id_email">
-            <label for="id_po_number">销售单号（'7'开头）:</label>
-            <input type="text" name="po_number" placeholder="76543210" maxlength="10" required="" id="id_po_number">
-            <label for="id_client">客户:</label>
-            <input type="text" name="client" maxlength="20" id="id_client">
-            <label for="id_salesperson">销售人员:</label>
-            <input type="text" name="salesperson" maxlength="10" id="id_salesperson">
-            <label for="id_office">分公司:</label>
-            <select name="office" id="id_office">
-                <option value="" selected="">---------</option>
-                <option value="bj">北京</option>
-                <option value="sh">上海</option>
-                <option value="gz">广州</option>
-                <option value="cd">成都</option>
-            </select>
-            <button type="submit">提交</button>
-        </form>
-        <p class="if_required">该表格前两项为必填，其余项为选填。</p>
-    </fieldset>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href=".\form.css">
+        <title>AKC-notice</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>AKC下单通知</legend>
+            <form method="post" id="akc_notice_form" data-netlify="true">
+                <label for="id_email">下单人邮箱地址:</label>
+                <input type="email" name="email" placeholder="@hafele.com.cn" maxlength="254" required="" id="id_email">
+                <label for="id_po_number">销售单号（'7'开头）:</label>
+                <input type="text" name="po_number" placeholder="76543210" maxlength="10" required="" id="id_po_number">
+                <label for="id_client">客户:</label>
+                <input type="text" name="client" maxlength="20" id="id_client">
+                <label for="id_salesperson">销售人员:</label>
+                <input type="text" name="salesperson" maxlength="10" id="id_salesperson">
+                <label for="id_office">分公司:</label>
+                <select name="office" id="id_office">
+                    <option value="" selected="">---------</option>
+                    <option value="bj">北京</option>
+                    <option value="sh">上海</option>
+                    <option value="gz">广州</option>
+                    <option value="cd">成都</option>
+                </select>
+                <label for="add_on">请选择需要哪种宏？（可多选）</label>
+                <div class="add_on_option">
+                    <input type="checkbox" name="alarm" id="alarm">
+                    <label for="alarm">报警</label>
+                </div>
+                <div class="add_on_option">
+                    <input type="checkbox" name="dual_antenna" id="dual_antenna">
+                    <label for="dual_antenna">双读头（分别控制）</label>
+                </div>
+                <div class="add_on_option">
+                    <input type="checkbox" name="aux_port" id="aux_port">
+                    <label for="aux_port">启用扩展输入输出端口</label>
+                </div>
+                <div class="add_on_option">
+                    <input type="checkbox" name="inter_locking" id="inter_locking">
+                    <label for="inter_locking">互锁</label>
+                </div>
+
+                <button type="submit">提交</button>
+            </form>
+            <p class="if_required">该表格前两项为必填，其余项为选填。</p>
+        </fieldset>
+    </body>
 </html>
