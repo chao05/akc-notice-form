@@ -10,7 +10,9 @@
     <body>
         <fieldset>
             <legend>AKC下单通知</legend>
-            <form method="post" id="akc_notice_form" data-netlify="true">
+            <p class="if_required">该表格前三项为必填，其余项为选填。</p>
+            <form method="post" id="akc_notice_form" data-netlify="true">            
+                
                 <label for="id_email">下单人邮箱地址:</label>
                 <input type="email" name="email" placeholder="@hafele.com.cn" maxlength="254" required="" id="id_email">
                 <input type="hidden" name="recipient_email" value="{{ form.email }}">
@@ -19,6 +21,7 @@
                 <input type="text" name="po_number" placeholder="76543210" maxlength="10" required="" id="id_po_number">
                 <label for="AKC_quantity">该单订购的蓝牙卡片（917.64.980）数量：</label>
                 <input type="number" min="1" placeholder="1" name="AKC_quantity" id="AKC_quantity" required>
+                <textarea name="reminder" id="reminder" cols="30" rows="3" readonly>蓝牙卡片（917.64.980）已下单，请仓库同事拍摄卡片序列号和订单号发送至产品部电子锁组（通过微信，企业微信等方式）</textarea>
 
                 <label for="id_client">客户:</label>
                 <input type="text" name="client" maxlength="20" id="id_client">
@@ -61,7 +64,6 @@
 
                 <button type="submit">提交</button>
             </form>
-            <p class="if_required">该表格前三项为必填，其余项为选填。</p>
         </fieldset>
     </body>
 </html>

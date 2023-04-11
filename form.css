@@ -33,7 +33,7 @@ border-radius: 5px;
 background-color: #f2f2f2;
 padding: 20px;
 }
-p {
+.if_required {
     color: blue;
 }
 .add_on_option {
@@ -41,3 +41,4 @@ p {
     margin-top: 2%;
     margin-bottom: 2%;
 }
+#reminder {color: brown;}
